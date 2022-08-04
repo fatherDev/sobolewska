@@ -1,0 +1,150 @@
+.c-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: rv(50, 130);
+  padding-top: 120px;
+
+  @include media(tablet) {
+    min-height: 100vh;
+    padding-top: 0;
+    padding-top: rv(127);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 24px;
+    height: 400px;
+    width: 75%;
+    background-color: #f1f7f7;
+    pointer-events: none;
+    z-index: -1;
+
+    @include media(mobile) {
+      right: 0;
+      width: 60%;
+      height: calc(100vh - 41px - 2 * #{rv(22, 46)});
+    }
+
+    @include media(tablet) {
+      width: 40%;
+    }
+  }
+
+  &__label {
+    @include typo-p2;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-5vw);
+    @include transition($fadeTransitionDuration, $fadeTransitionTimingFunction);
+    transition-delay: -50ms;
+
+    &.is-inview {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__col {
+    grid-column: 1/13;
+  }
+
+  &__col--left {
+    @include media(tablet) {
+      grid-column: 1/6;
+      padding-top: 16px;
+    }
+  }
+
+  &__col--right {
+    margin-top: 60px;
+
+    @include media(tablet) {
+      grid-column: 7/13;
+      margin-top: 0;
+    }
+  }
+
+  &__links-wrapper {
+    margin-top: rv(20, 40);
+    opacity: 0;
+    transform: translateX(-5vw);
+    @include transition($fadeTransitionDuration, $fadeTransitionTimingFunction);
+    transition-delay: 150ms;
+
+    &.is-inview {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @include media(mobile) {
+      column-count: 2;
+      width: 70%;
+    }
+  }
+
+  &__link-item {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__link {
+    border-bottom: 1px solid color(primary2-medium);
+    @include transition;
+
+    &:hover {
+      border-color: transparent;
+      opacity: 0.5;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    height: 360px;
+
+    @include media(mobile) {
+      height: 75vh;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 24px;
+      width: 70%;
+      height: 70%;
+      background-color: #197278;
+      z-index: -1;
+      pointer-events: none;
+      transform: translateX(5vw);
+      @include transition(
+        $fadeTransitionDuration,
+        $fadeTransitionTimingFunction
+      );
+
+      @include media(tablet) {
+        right: 0;
+      }
+    }
+
+    &.is-inview {
+      &::before {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 80%;
+    max-width: 560px;
+    object-fit: cover;
+    object-position: top;
+
+    @include media(tablet) {
+      width: auto;
+    }
+  }
+}

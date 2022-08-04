@@ -1,0 +1,55 @@
+@import '../../node_modules/normalize.css/normalize.css';
+
+@import 'base/functions';
+@import 'base/variables';
+@import 'base/media-config';
+@import 'base/fonts';
+@import 'base/mixins';
+@import 'base/typography';
+@import 'base/ui';
+@import 'base/offsets';
+@import 'base/global';
+
+@import 'vendors/lazy-loading-animation';
+/* Bulk load other styles
+========================================================================= */
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/inner';
+@import 'layout/main';
+@import 'layout/sections';
+@import 'layout/grid';
+@import 'layout/mini-text-blocks';
+
+/* Components =========================================================== */
+@import 'components/btn';
+@import 'components/text-block';
+@import 'components/page-cover';
+@import 'components/nav';
+@import 'components/single';
+@import 'components/blog-card';
+@import 'components/blog-hero';
+@import 'components/blog-posts';
+@import 'components/single-post-hero';
+@import 'components/related-news';
+@import 'components/related-news-slider';
+@import 'components/testimonial';
+@import 'components/testimonial-with-img';
+@import 'components/testimonials-repeater';
+@import 'components/home-hero';
+@import 'components/testimonials-pagination';
+@import 'components/hamburger';
+@import 'components/link-card';
+@import 'components/link-cards-repeater';
+@import 'components/text-block-with-img';
+@import 'components/text-block-with-img-variant-1';
+@import 'components/text-block-with-img-variant-2';
+@import 'components/text-block-with-img-variant-3';
+@import 'components/cta';
+@import 'components/video-modal';
+@import 'components/hero';
+@import 'components/page-contact';
+@import 'components/form';
+@import 'components/info-card';
+@import 'components/info-repeater';
+@import 'components/partners';

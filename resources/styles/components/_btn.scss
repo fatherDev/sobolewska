@@ -1,0 +1,27 @@
+.c-btn {
+  @include typo-buttons;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  text-transform: uppercase;
+  color: color(primary1-medium);
+
+  svg {
+    @include transition;
+  }
+
+  &:hover {
+    svg {
+      transform: translateX(4px);
+    }
+  }
+
+  &--white {
+    color: #fff;
+  }
+
+  &--dark {
+    color: color(t-dark);
+  }
+}

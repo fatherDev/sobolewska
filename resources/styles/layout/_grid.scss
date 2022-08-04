@@ -1,0 +1,15 @@
+.l-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: rv(8, 40);
+
+  @include media(tablet) {
+    &__col-offset {
+      margin-left: 2.08vw;
+    }
+
+    &__col-offset--right {
+      margin-right: 2.08vw;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.c-link-cards-repeater {
+  margin-bottom: rv(90, 240);
+
+  &__grid {
+    @include media(0, tablet) {
+      row-gap: rv(16);
+    }
+
+    @include media(tablet) {
+      row-gap: rv(8, 40);
+    }
+  }
+
+  &__card {
+    grid-column: 1/-1;
+
+    @include media(tablet) {
+      grid-column: span 6;
+    }
+
+    @include media(tablet-lg) {
+      grid-column: span 4;
+    }
+  }
+}

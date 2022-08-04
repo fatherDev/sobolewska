@@ -1,0 +1,43 @@
+.c-blog-hero {
+  @include typo-p2;
+  position: relative;
+  padding-top: rv(113, 256);
+  margin-bottom: rv(90, 177);
+
+  &__subtitle {
+    color: color(t-medium);
+    padding: rv(50, 146) 0 rv(20, 50);
+  }
+
+  &__desc {
+    padding-top: rv(30, 60);
+  }
+
+  &__box1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 78.8%;
+    width: 100%;
+    background-color: color(bg-light2);
+    z-index: -1;
+
+    @include media(tablet) {
+      width: 70.83vw;
+    }
+  }
+
+  &__box2 {
+    position: absolute;
+    top: rv(320, 414);
+    right: 0;
+    height: 50%;
+    width: 56.8vw;
+    background-color: color(primary2-medium);
+    z-index: -1;
+
+    @include media(tablet) {
+      width: 36.45vw;
+    }
+  }
+}

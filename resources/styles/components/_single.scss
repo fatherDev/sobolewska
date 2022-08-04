@@ -1,0 +1,123 @@
+.c-single {
+  margin: rv(40, 170) 0;
+
+  .l-grid {
+    & > * {
+      grid-column: 1/-1;
+
+      @include media(tablet-lg) {
+        grid-column: 3/9;
+      }
+    }
+  }
+
+  &__author {
+    grid-column: 1/3 !important;
+
+    @include media(0, tablet-lg) {
+      display: none;
+    }
+  }
+
+  &__author-img {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    margin-top: 20px;
+
+    img {
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -4px;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: color(primary1);
+      z-index: -1;
+    }
+  }
+
+  ul,
+  ol {
+    li {
+      color: color(t-medium);
+      margin-bottom: 14px;
+      &::marker {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  p {
+    font-size: 22px;
+    color: color(t-dark);
+  }
+
+  p + p {
+    @include typo-p2;
+    color: color(t-medium);
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 22px;
+    font-weight: normal;
+    color: color(t-dark);
+
+    & + p {
+      @include typo-p2;
+      color: color(t-medium);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  blockquote {
+    @include typo-h3;
+    position: relative;
+
+    color: color(t-medium);
+    margin: 50px 0;
+    padding: 80px 0 0;
+    border-top: 1px solid color(primary2-light);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 59px;
+      height: 36px;
+      background-image: url('../images/quote.png');
+
+      @include media(tablet-lg) {
+        top: 40px;
+      }
+    }
+
+    p + p {
+      @include typo-p2;
+      color: color(light);
+      text-transform: none;
+      margin-top: 30px;
+    }
+
+    @include media(tablet-lg) {
+      grid-column: 1/10 !important;
+      margin: rv(80, 110) 0 60px;
+      padding: 40px 0 0 23%;
+    }
+  }
+}

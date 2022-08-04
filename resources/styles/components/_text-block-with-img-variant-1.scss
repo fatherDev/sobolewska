@@ -1,0 +1,121 @@
+.c-text-block-with-img-variant-1 {
+  margin-bottom: rv(90, 240);
+
+  @include media(0, tablet) {
+    overflow: hidden;
+  }
+
+  &__grid {
+    grid-auto-flow: dense;
+
+    @include media(0, tablet) {
+      row-gap: rv(68);
+    }
+  }
+
+  &__text-block-wrapper {
+    grid-column: 1/-1;
+
+    @include media(tablet) {
+      grid-column: 7/-2;
+    }
+  }
+
+  &__img-wrapper {
+    grid-column: 1/-4;
+
+    @include media(0, tablet) {
+      position: relative;
+    }
+
+    @include media(tablet) {
+      grid-column: 2/6;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__accent {
+    position: absolute;
+    z-index: -1;
+
+    &--box {
+      left: -1rem;
+      width: rv(359, 359, $mobileWidth);
+      height: rv-max(768, 245);
+      color: color(light);
+
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include media(mobile) {
+        left: -2.75rem;
+      }
+
+      @include media(tablet) {
+        left: 0;
+        width: rv(359, 700);
+        height: rv(245, 412);
+      }
+    }
+
+    &--box-smaller {
+      top: -20px;
+      right: calc((#{rv-max(500, 22)} + (#{rv(8, 40)}) + 1rem + 1px) * -1);
+      width: rv-max(768, 272);
+      height: 95.5%;
+      color: color(primary1-medium);
+
+      @include media(mobile) {
+        right: calc((#{rv-max(500, 22)} + (#{rv(8, 40)}) + 2.75rem) * -1);
+      }
+
+      @include media(tablet) {
+        right: auto;
+        top: 0;
+        left: 0;
+        transform: translateY(calc(#{rv(20, 58)} * -1));
+        width: rv(272, 505);
+        height: rv(191, 433);
+      }
+    }
+
+    &--box-bigger {
+      bottom: 3.5%;
+      left: 15%;
+      height: rv(200, 433);
+      width: rv(300, 779);
+      color: color(primary1-light);
+
+      @include media(0, tablet) {
+        display: none;
+      }
+    }
+
+    .c-text-block-with-img-variant-1__accent-inner {
+      height: 100%;
+      width: 100%;
+      background-color: currentColor;
+    }
+  }
+
+  &--two-boxes {
+    @include media(tablet) {
+      padding-top: rv(20, 58);
+    }
+
+    .c-text-block-with-img-variant-1__img-wrapper {
+      grid-column: 2/-2;
+
+      @include media(0, tablet) {
+        position: relative;
+      }
+
+      @include media(tablet) {
+        grid-column: 2/6;
+      }
+    }
+  }
+}

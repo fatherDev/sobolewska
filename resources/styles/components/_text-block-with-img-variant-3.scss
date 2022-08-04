@@ -1,0 +1,109 @@
+.c-text-block-with-img-variant-3 {
+  margin-bottom: rv(90, 240);
+
+  @include media(0, tablet-lg) {
+    overflow: hidden;
+  }
+
+  &__grid {
+    grid-auto-flow: dense;
+    row-gap: rv(100);
+
+    @include media(mobile) {
+      row-gap: rv(150);
+    }
+
+    @include media(tablet-lg) {
+      row-gap: 0;
+    }
+  }
+
+  &__text-block-wrapper {
+    grid-column: 1/-1;
+
+    @include media(tablet-lg) {
+      grid-column: 8/-1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .c-text-block__desc2 {
+      @include media(tablet-lg) {
+        font-size: rv(14);
+      }
+    }
+  }
+
+  &__img-wrapper {
+    grid-column: 3/-1;
+    display: flex;
+    align-items: flex-end;
+
+    @include media(0, tablet-lg) {
+      position: relative;
+    }
+
+    @include media(tablet-lg) {
+      grid-column: 2/7;
+      min-height: rv(240, 825);
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__accent {
+    position: absolute;
+    z-index: -1;
+
+    &--box-smaller {
+      left: 0;
+      bottom: 0;
+      height: 109%;
+      width: 69.36%;
+      color: color(primary2-medium);
+
+      @include media(0, tablet-lg) {
+        transform: translateX(calc(#{rv-max(1000, 59)} * -1));
+      }
+
+      @include media(tablet-lg) {
+        height: rv(240, 645);
+        width: rv(197, 520);
+      }
+    }
+
+    &--box-bigger {
+      left: 0;
+      bottom: 0;
+      height: 128.63%;
+      width: 108.098%;
+      background-color: color(primary2-light);
+      z-index: -2;
+      transform: translateX(calc((#{rv-max(1000, 59)} + 1rem) * -1));
+
+      @include media(mobile) {
+        transform: translateX(calc((#{rv-max(1000, 59)} + 2.75rem) * -1));
+      }
+
+      @include media(tablet-lg) {
+        height: rv(240, 825);
+        // max-height: 121.323%;
+        width: rv(197, 840);
+        transform: translateX(-10vw);
+      }
+
+      @include media(desktop) {
+        // max-height: 100%;
+      }
+    }
+
+    .c-text-block-with-img-variant-3__accent-inner {
+      height: 100%;
+      width: 100%;
+      background-color: currentColor;
+    }
+  }
+}

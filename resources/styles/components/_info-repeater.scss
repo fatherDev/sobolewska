@@ -1,0 +1,33 @@
+.c-info-repeater {
+  margin-bottom: rv(90, 240);
+
+  &__label {
+    margin-bottom: rv(30, 60);
+    color: color(t-medium);
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  .splide__arrow {
+    top: calc(-20px - #{rv(30, 60)});
+    right: 0;
+    height: auto;
+    background-color: transparent;
+    transform: none;
+
+    &--prev {
+      left: auto;
+      right: 50px;
+    }
+
+    &[disabled] {
+      color: color(light);
+      opacity: 1;
+      &:hover {
+        color: color(light);
+      }
+    }
+  }
+}

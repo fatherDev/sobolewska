@@ -1,0 +1,699 @@
+{
+  "key": "group_623b49131eab1",
+  "title": "Strona główna",
+  "fields": [
+    {
+      "key": "field_623c27bafc2ea",
+      "label": "Hero",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623c27ccfc2eb",
+      "label": "Hero",
+      "name": "hero",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623c26647e2e6"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_623c6d4d67504",
+      "label": "Bloczki tekstu",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623c6d6467505",
+      "label": "Bloczki tekstu",
+      "name": "mini_text_blocks",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623c6c58aead4"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_623c701068914",
+      "label": "Karty ze zdjęciem",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623c702468915",
+      "label": "Karty ze zdjęciem",
+      "name": "link_cards",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623c6f29b349c"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_623d9ac1def54",
+      "label": "Tekst ze zdjęciem 1",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623d9a98def53",
+      "label": "Tekst ze zdjęciem",
+      "name": "text_block_with_img_1",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623d99fc63e19"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_623dce68f1735",
+      "label": "Tekst ze zdjęciem 2",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623dce60f1734",
+      "label": "Tekst ze zdjęciem",
+      "name": "text_block_with_img_2",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623d99fc63e19"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_624184a90eb7e",
+      "label": "Tekst ze zdjęciem 3",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_624184ae0eb7f",
+      "label": "Tekst ze zdjęciem",
+      "name": "text_block_with_img_3",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623d99fc63e19"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_623dce985a0ad",
+      "label": "Artykuły",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623dce825a0ac",
+      "label": "Artykuły",
+      "name": "news",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "field_623dceaf5a0ae",
+          "label": "Nagłówek",
+          "name": "title",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 4,
+          "new_lines": "br"
+        },
+        {
+          "key": "field_623dcebf5a0af",
+          "label": "Etykieta",
+          "name": "subtitle",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_623dcecc5a0b0",
+          "label": "Zdjęcie",
+          "name": "img",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "preview_size": "medium",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": ""
+        },
+        {
+          "key": "field_623dcee85a0b1",
+          "label": "Przycisk",
+          "name": "btn",
+          "type": "link",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array"
+        }
+      ]
+    },
+    {
+      "key": "field_623c6d4d67504",
+      "label": "Bloczki tekstu",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623c6d6467505",
+      "label": "Bloczki tekstu",
+      "name": "mini_text_blocks",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623c6c58aead4"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_623c701068914",
+      "label": "Karty ze zdjęciem",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623c702468915",
+      "label": "Karty ze zdjęciem",
+      "name": "link_cards",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623c6f29b349c"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_623d9ac1def54",
+      "label": "Tekst ze zdjęciem 1",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623d9a98def53",
+      "label": "Tekst ze zdjęciem",
+      "name": "text_block_with_img_1",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623d99fc63e19"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_623dce68f1735",
+      "label": "Tekst ze zdjęciem 2",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623dce60f1734",
+      "label": "Tekst ze zdjęciem",
+      "name": "text_block_with_img_2",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623d99fc63e19"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_624184a90eb7e",
+      "label": "Tekst ze zdjęciem 3",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_624184ae0eb7f",
+      "label": "Tekst ze zdjęciem",
+      "name": "text_block_with_img_3",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623d99fc63e19"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_623dce985a0ad",
+      "label": "Artykuły",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623dce825a0ac",
+      "label": "Artykuły",
+      "name": "news",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "field_623dceaf5a0ae",
+          "label": "Nagłówek",
+          "name": "title",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 4,
+          "new_lines": "br"
+        },
+        {
+          "key": "field_623dcebf5a0af",
+          "label": "Etykieta",
+          "name": "subtitle",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_623dcecc5a0b0",
+          "label": "Zdjęcie",
+          "name": "img",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "preview_size": "medium",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": ""
+        },
+        {
+          "key": "field_623dcee85a0b1",
+          "label": "Przycisk",
+          "name": "btn",
+          "type": "link",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array"
+        }
+      ]
+    },
+    {
+      "key": "field_62443176825a7",
+      "label": "Partnerzy",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_624430f27a6a1",
+      "label": "Partnerzy",
+      "name": "partners",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_62442ed6706c5"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 1
+    },
+    {
+      "key": "field_623b4917524a5",
+      "label": "Opinie",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "left",
+      "endpoint": 0
+    },
+    {
+      "key": "field_623b4923524a6",
+      "label": "Opinie",
+      "name": "testimonials",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_623b48be0a4e1"],
+      "display": "group",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page",
+        "operator": "==",
+        "value": "9"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": ["the_content"],
+  "active": true,
+  "description": "",
+  "modified": 1648636313
+}

@@ -1,0 +1,20 @@
+.c-blog-card {
+  color: color(t-dark);
+  @include typo-p2;
+
+  &__subtitle {
+    color: color(t-medium);
+  }
+
+  &__title {
+    @include typo-buttons;
+    @include transition;
+    margin: rv(14, 18) 0 rv(20, 25);
+  }
+
+  &:hover {
+    .c-blog-card__title {
+      color: color(t-medium);
+    }
+  }
+}

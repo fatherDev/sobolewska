@@ -1,0 +1,28 @@
+.c-testimonials-repeater {
+  position: relative;
+  &__slide {
+    transition: none !important;
+
+    .c-testimonial {
+      &__desc {
+        transform: translateY(60px);
+        opacity: 0;
+      }
+
+      &__name {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+    }
+
+    &.is-visible {
+      .c-testimonial {
+        &__desc,
+        &__name {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

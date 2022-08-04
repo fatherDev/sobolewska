@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/* Maps
+========================================================================== */
+/*
+    The names and values of variables in maps are just suggestions/random values.
+    Feel free to add new values, modify both the values and/or keys of the items depending on the project and your prefferences.
+    For each map, a functions is defined (in base/_functions.scss).
+    By default, function names are single a singular form of the map's variable name.
+    Eg. To use the "main" color, a getter function "color" is defined.
+    To use it, simply call: color(main).
+*/
+
+$breakpoints: (
+  mobile-sm: 22.5em,
+  // 360px
+  mobile: 48em,
+  // 768px
+  tablet: 64em,
+  // 1024px
+  tablet-lg: 71.25em,
+  // 1140px
+  desktop: 87.5em,
+  // 1400px
+);
+
+$orientations: (
+  portrait: portrait,
+  landscape: landscape,
+);
+
+$colors: (
+  main: #1c1c1c,
+  t-dark: #151618,
+  t-medium: #565b64,
+  t-light: #f8f6e9,
+  primary1: #5e9ea0,
+  primary1-medium: #197278,
+  primary1-light: #f1f7f7,
+  primary2: #cc8f4e,
+  primary2-medium: #edddd4,
+  primary2-light: #fbf8f6,
+  primary3: #c44536,
+  primary3-medium: #c44536,
+  primary3-light: #faedeb,
+  bg-light: #f1f7f7,
+  bg-light2: #fbf8f6,
+  bg-dark: #000c0f,
+  danger: #df2323,
+  light: #adadad,
+  white: #ffffff,
+);
+
+// Set main font size to body (eg. 12px), then refer to it using rem, eg. secondary: 2rem -> 24px
+$font-sizes: (
+  main: 16px,
+);
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+);
+
+// 1.14 / 1.2 / 1.25 / 1.33 / 1.4 / 1.5 / 1.6 / 1.71 / 1.75 / 2 / 2.3
+$line-heights: (
+  basic: 1,
+  extra-tiny: 1.14,
+  tiny: 1.2,
+  small: 1.25,
+  default: 1.33,
+  normal: 1.4,
+  standard: 1.45,
+  medium: 1.5,
+  large: 1.6,
+  extra-large: 1.71,
+  big: 1.75,
+  huge: 2,
+  enormous: 2.3,
+);
+
+$letter-spacings: (
+  spacing1: 1px,
+);
+
+$offsets: (
+  default: 16px,
+  large: 24px,
+  small: 8px,
+);
+
+$fonts: (
+  main: #{'Roboto',
+  sans-serif},
+  secondary: 'Oswald',
+);
+
+$defaults: (
+  border-radius: 4px,
+  line-height: 1.2,
+);
+
+// max value screen width
+$desktopWidth: 1920;
+$mobileWidth: 375;
+
+/* Standalone variables
+========================================================================== */
+$white-space: 1em;
+$form-control-height: 2rem;
+
+// inner
+$size-inner-width: 1320px;
+$size-inner-padding-mb: 1.5rem;
+$size-inner-padding: 2rem;
+
+$size-inner-sm-width: 1236px;
+// $size-inner-padding-mb: 1rem;
+$size-inner-padding: 2.75rem;
+$size-inner-padding-wide: 2rem;
+$size-inner-padding-tablet: rv(16, 140);
+
+// ui width
+$size-ui-small-width: 864px;

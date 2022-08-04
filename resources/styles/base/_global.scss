@@ -1,0 +1,33 @@
+[data-scroll],
+[data-scroll-section],
+[data-horizontal-scroll-content] {
+  will-change: transform, opacity;
+}
+
+// Prevent text disapearing while scrolling up with locomotive scroll
+html.has-scroll-smooth {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+}
+
+body,
+html {
+  &.js-scroll-block {
+    overflow: hidden;
+  }
+}
+
+.c-scrollbar {
+  z-index: 111;
+}

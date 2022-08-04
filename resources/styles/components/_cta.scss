@@ -1,0 +1,84 @@
+.c-cta {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 140px;
+
+  @include media(tablet) {
+    height: 80vh;
+    padding-top: 0;
+  }
+
+  &__img-in-grid {
+    margin-bottom: rv(90, 240);
+
+    @include media(tablet) {
+      height: auto;
+    }
+
+    .c-cta__inner {
+      padding-top: rv(60, 100);
+    }
+
+    .c-cta__img {
+      top: -140px;
+
+      @include media(tablet) {
+        top: 0;
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 370px;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+    @include media(tablet) {
+      width: 60%;
+      height: 100%;
+    }
+  }
+
+  &__col {
+    grid-column: 1/13;
+    background-color: color(primary1-medium);
+    padding: rv(50, 90) rv(30, 140);
+    color: white;
+
+    @include media(tablet) {
+      grid-column: 5/13;
+    }
+  }
+
+  &__label {
+    @include typo-p2;
+    margin-bottom: rv(8);
+
+    @include media(tablet) {
+      margin-bottom: rv(20);
+    }
+  }
+
+  &__title {
+    @include typo-h4;
+    margin-bottom: rv(16, 30);
+
+    @include media(mobile) {
+      @include typo-h2;
+    }
+  }
+
+  &__desc {
+    @include typo-p2;
+    margin-bottom: rv(30, 40);
+  }
+}

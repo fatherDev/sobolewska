@@ -1,0 +1,11 @@
+.c-text-block-with-img {
+  @include media(0, tablet) {
+    overflow: hidden;
+  }
+
+  &__variant-container {
+    @include media(tablet) {
+      position: relative;
+    }
+  }
+}

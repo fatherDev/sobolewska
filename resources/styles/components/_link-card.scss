@@ -1,0 +1,116 @@
+.c-link-card {
+  position: relative;
+  height: rv-max(400, 225);
+  padding: rv(20, 40) rv(20, 53);
+  font-size: calc(0.267857142857143vw + 6.142857142857142px);
+
+  @include media(tablet-lg) {
+    height: rv(225, 340);
+  }
+
+  @include media(desktop) {
+    font-size: rv(12);
+  }
+
+  &::before,
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 0);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+
+  &::before {
+    @include transition(440ms, cubic-bezier(0.33, 0.04, 0.1, 1));
+
+    content: '';
+    transition-property: transform, clip-path;
+    background-color: color(primary1);
+    transform: translate(0, 0);
+
+    clip-path: inset(0 0 0 0);
+  }
+
+  &:nth-child(3n-1) {
+    &::before {
+      background-color: color(primary2);
+    }
+  }
+
+  &:nth-child(3n) {
+    &::before {
+      background-color: color(primary3);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  &__img {
+    @include transition((440ms), (cubic-bezier(0.33, 0.04, 0.1, 1)));
+
+    transition-property: clip-path, transform;
+    object-fit: cover;
+    clip-path: inset(0 0 0 0);
+    opacity: 0;
+  }
+
+  &__title {
+    @include typo-h4;
+
+    @include transition(
+      (500ms, 440ms),
+      (ease, cubic-bezier(0.33, 0.04, 0.1, 1))
+    );
+
+    position: relative;
+    opacity: 0;
+    transition-property: opacity, transform, clip-path;
+    transition-duration: 440ms;
+    transform: translate(0, 0);
+    color: color(white);
+  }
+
+  &.is-inview {
+    .c-link-card__title {
+      opacity: 1;
+    }
+
+    .c-link-card__img {
+      animation: fade-in 760ms 280ms ease forwards;
+    }
+
+    &:hover {
+      .c-link-card__img {
+        transform: translate(0.125em, -0.125em);
+        clip-path: inset(0 0 0.5em 0.5em);
+      }
+
+      .c-link-card__title {
+        transform: translate(0.5em, -0.5em);
+      }
+
+      &::before {
+        clip-path: inset(0.5em 0.5em 0 0);
+        transform: translate(-0.125em, 0.125em);
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}

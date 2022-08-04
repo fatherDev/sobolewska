@@ -1,0 +1,96 @@
+{
+    "key": "group_623c7a4c4aa1e",
+    "title": "Text block - CLONE",
+    "fields": [
+        {
+            "key": "field_623c7a53e3f79",
+            "label": "Nagłówek",
+            "name": "title",
+            "type": "textarea",
+            "instructions": "Zostaw pustą wartość aby nie wyświetlać pola na stronie",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_623c7a84e3f7a",
+            "label": "Większy opis",
+            "name": "desc1",
+            "type": "wysiwyg",
+            "instructions": "Zostaw pustą wartość aby nie wyświetlać pola na stronie",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_623c7adce3f7b",
+            "label": "Mniejszy opis",
+            "name": "desc2",
+            "type": "wysiwyg",
+            "instructions": "Zostaw pustą wartość aby nie wyświetlać pola na stronie",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_623c7b06e3f7c",
+            "label": "Przycisk",
+            "name": "btn",
+            "type": "link",
+            "instructions": "Zostaw pustą wartość aby nie wyświetlać pola na stronie",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": ""
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1648132710
+}

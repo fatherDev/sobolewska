@@ -1,0 +1,65 @@
+.l-mini-text-blocks {
+  margin-bottom: rv(50, 100);
+
+  &__col {
+    grid-column: 1/13;
+  }
+
+  &__col--left {
+    @include media(tablet) {
+      grid-column: 1/5;
+    }
+  }
+
+  &__col--right {
+    @include media(tablet) {
+      grid-column: 5/13;
+    }
+  }
+
+  &__item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    column-gap: 8px;
+
+    @include media(tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 40px;
+    }
+  }
+
+  &__item {
+    margin-bottom: rv(20, 60);
+    @include transition(0.9s);
+    transform: translateY(40px);
+    opacity: 0;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    &.is-inview {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &__label,
+  &__desc {
+    color: color(t-medium);
+  }
+
+  &__label {
+    @include typo-p1;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include typo-buttons;
+    margin-bottom: rv(16, 25);
+  }
+
+  &__desc {
+    @include typo-p2;
+  }
+}

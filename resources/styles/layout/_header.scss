@@ -1,0 +1,66 @@
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  @include transition;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rv(22, 46) 0;
+  }
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  .ui-link svg g path {
+    @include transition;
+  }
+
+  &.show {
+    background-color: white;
+
+    .ui-link svg g path {
+      fill: color(t-dark);
+    }
+
+    @include media(tablet-lg) {
+      li.menu-item a {
+        color: color(t-dark);
+      }
+    }
+
+    div.c-hamburger__line {
+      background-color: color(t-dark);
+    }
+  }
+}
+
+.home {
+  .l-header {
+    .ui-link {
+      svg path {
+        fill: white;
+      }
+    }
+
+    .menu-item a {
+      @include media(tablet) {
+        color: white;
+      }
+    }
+
+    .c-hamburger__line {
+      background-color: white;
+    }
+    .c-hamburger.is-active {
+      .c-hamburger__line {
+        background-color: color(t-dark);
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.c-testimonials-pagination {
+  @include reset--list;
+  position: absolute;
+  z-index: 2;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  height: 53px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media(tablet) {
+    height: 81px;
+    bottom: 200px;
+  }
+
+  &__item {
+    @include transition;
+    position: relative;
+
+    width: 35px;
+    height: 35px;
+    opacity: 0.6;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include media(tablet) {
+      width: 43px;
+      height: 43px;
+    }
+
+    &--active {
+      width: 45px;
+      height: 45px;
+      opacity: 1;
+
+      @include media(tablet) {
+        width: 81px;
+        height: 81px;
+      }
+
+      .c-testimonials-pagination__svg {
+        opacity: 1;
+      }
+      .c-testimonials-pagination__person {
+        width: 45px;
+        height: 45px;
+
+        @include media(tablet) {
+          width: 81px;
+          height: 81px;
+        }
+      }
+    }
+  }
+
+  &__box {
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__svg {
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: 59px;
+    height: 59px;
+    color: color(t-medium);
+    opacity: 0;
+    z-index: -1;
+
+    @include media(tablet) {
+      width: 95px;
+      height: 95px;
+    }
+  }
+
+  &__circle {
+    color: color(primary1);
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+
+    stroke-dashoffset: 295.3px;
+    stroke-dasharray: 295.3px;
+  }
+
+  &__person {
+    width: 35px;
+    height: 35px;
+
+    @include media(tablet) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}

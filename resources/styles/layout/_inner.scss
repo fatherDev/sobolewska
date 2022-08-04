@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Inner
+   ========================================================================== */
+@mixin inner() {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: calc(#{$size-inner-width} + (#{$size-inner-padding-mb} * 2));
+  margin: 0 auto;
+
+  vertical-align: baseline;
+
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @include media(mobile) {
+    max-width: calc(#{$size-inner-width} + (#{$size-inner-padding} * 2));
+
+    padding-right: $size-inner-padding;
+    padding-left: $size-inner-padding;
+  }
+
+  @include media(tablet) {
+    max-width: none;
+    width: 100%;
+    padding-right: $size-inner-padding-tablet;
+    padding-left: $size-inner-padding-tablet;
+  }
+}
+
+.l-inner {
+  @include inner;
+}
+
+.l-inner-wide {
+  @include inner;
+
+  @include media(mobile) {
+    max-width: calc(#{$size-inner-width} + (#{$size-inner-padding-wide} * 2));
+
+    padding-right: $size-inner-padding-wide;
+    padding-left: $size-inner-padding-wide;
+  }
+}
+
+.l-inner-sm {
+  @include inner;
+
+  padding-right: $size-inner-padding-mb;
+  padding-left: $size-inner-padding-mb;
+
+  @include media(mobile) {
+    padding-left: $size-inner-padding;
+    padding-right: $size-inner-padding;
+    max-width: $size-inner-sm-width;
+  }
+}
+
+.l-inner-sm.ui-no-padding-inner-mobile {
+  @include media(0, mobile) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

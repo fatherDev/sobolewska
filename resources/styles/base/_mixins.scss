@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/* 1. Font smoothing
+========================================================================== */
+/* Better font-rendering on OSX
+   https://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+*/
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+/* 2. A clearfix for floated elements
+========================================================================== */
+@mixin clearfix {
+  &:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    overflow: hidden;
+
+    height: 0;
+    margin: 0 !important;
+
+    line-height: 0;
+
+    content: '';
+  }
+}
+
+/* 3. Append a modificator class that changes color/bg
+========================================================================== */
+@mixin color-modifiers {
+  @each $name, $hex in $colors {
+    &--#{'' + $name} {
+      color: $hex;
+    }
+  }
+}
+
+@mixin background-modifiers {
+  @each $name, $hex in $colors {
+    &--#{'' + $name} {
+      background-color: $hex;
+    }
+  }
+}
+
+@mixin weight-modifiers {
+  @each $name, $value in $font-weights {
+    &--#{'' + $name} {
+      font-weight: $value;
+    }
+  }
+}
+
+@mixin letter-modifiers {
+  @each $name, $value in $letter-spacings {
+    &--#{'' + $name} {
+      letter-spacing: $value;
+    }
+  }
+}
+
+@mixin transition(
+  $duration: 400ms,
+  $timing: cubic-bezier(0.15, 0.85, 0.45, 1)
+) {
+  transition-timing-function: $timing;
+  transition-duration: $duration;
+}
+
+@mixin ellipsis() {
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin truncate($max-lines: 2) {
+  //white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $max-lines; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+/* Resets
+========================================================================== */
+@mixin reset--list() {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* Typography
+========================================================================== */
+
+@mixin typo-h1 {
+  font-size: rv(60, 122);
+  font-weight: 700;
+  font-family: font(secondary);
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@mixin typo-h2 {
+  font-size: rv(42, 100);
+  line-height: 1.1;
+  font-family: font(secondary);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@mixin typo-h3 {
+  font-size: rv(24, 42);
+  font-family: font(main);
+  font-weight: font-weight(regular);
+  line-height: 1.3;
+  text-transform: uppercase;
+
+  @include media(tablet) {
+    line-height: 1.2;
+  }
+}
+
+@mixin typo-h4 {
+  font-size: rv(20, 31);
+  line-height: 1.2;
+  font-weight: 700;
+  font-family: font(secondary);
+  text-transform: uppercase;
+}
+
+@mixin typo-p1 {
+  font-size: rv(16, 22);
+  line-height: 1.6;
+  font-family: font(main);
+
+  @include media(tablet) {
+    line-height: 1.5;
+  }
+}
+
+@mixin typo-p2 {
+  font-size: rv(14);
+  line-height: 1.6;
+  font-family: font(main);
+
+  @include media(tablet) {
+    font-size: rv(16);
+  }
+}
+
+@mixin typo-p3 {
+  font-size: rv(14);
+  line-height: 1.6;
+  font-family: font(main);
+}
+
+@mixin typo-buttons {
+  font-size: rv(14);
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: font(secondary);
+  font-weight: 500;
+
+  @include media(tablet) {
+    font-size: rv(18);
+  }
+}

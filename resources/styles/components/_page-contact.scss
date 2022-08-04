@@ -1,0 +1,78 @@
+.c-page-contact {
+  position: relative;
+  padding: 120px 0 90px 0;
+
+  @include media(tablet) {
+    padding: 180px 0 120px 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+    height: 830px;
+    width: 65%;
+    background-color: color(primary1-light);
+    pointer-events: none;
+    z-index: -1;
+
+    @include media(tablet) {
+      display: block;
+    }
+  }
+
+  &__content,
+  &__form {
+    grid-column: 1/13;
+  }
+
+  &__content {
+    @include media(tablet) {
+      grid-column: 1/7;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 60px;
+
+    @include media(tablet) {
+      grid-column: 8/12;
+      padding-bottom: 50px;
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    @include typo-h2;
+    margin-bottom: 20px;
+  }
+
+  &__data {
+    background-color: color(primary1-medium);
+    padding: rv(20, 140);
+    color: #fff;
+    margin-top: 44px;
+  }
+
+  &__box {
+    margin-bottom: 42px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    @include typo-h4;
+    display: inline-block;
+    margin: 16px 0 0 0;
+    word-break: break-all;
+
+    @include media(tablet) {
+      margin: 16px 16px 0 0;
+    }
+  }
+}

@@ -1,0 +1,202 @@
+.c-nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include reset--list;
+    margin-bottom: 40px;
+
+    @include media(tablet) {
+      position: static;
+      flex-direction: row;
+      height: auto;
+      margin-bottom: 0;
+      background-color: transparent;
+      transform: none;
+    }
+
+    .sub-menu {
+      position: static;
+      top: 100%;
+      left: 50%;
+      @include reset--list;
+      padding: 44px 0 20px 0;
+      background-color: white;
+      @include transition;
+
+      @include media(tablet) {
+        position: absolute;
+        opacity: 0;
+        padding: 60px;
+        visibility: hidden;
+        transform: translate(-50%, 12px);
+      }
+
+      .menu-item {
+        margin: 0 0 12px 0;
+        white-space: nowrap;
+
+        @include media(0, tablet) {
+          font-family: font(main);
+          font-weight: 400;
+          margin: 0 0 16px 0;
+          font-size: 22px;
+          text-transform: none;
+          text-align: center;
+        }
+
+        a {
+          color: color(t-dark) !important;
+          border-bottom: 1px solid color(primary2-light);
+        }
+
+        a::before {
+          background-color: color(primary2-medium);
+        }
+      }
+    }
+
+    .menu-item-has-children {
+      @include media(0, tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .sub-menu__wrapper {
+          overflow: hidden;
+          @include transition;
+        }
+      }
+    }
+
+    .menu-item {
+      position: relative;
+      margin-left: rv(30, 54);
+      @include transition;
+      @include media(0, tablet) {
+        font-family: font(secondary);
+        font-size: 31px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+
+        &:nth-last-of-type(1) {
+          margin: 0;
+        }
+      }
+
+      @include media(tablet) {
+        @include typo-p1;
+      }
+
+      a {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background-color: currentColor;
+          transform: scaleX(0);
+          transform-origin: left;
+          @include transition;
+        }
+
+        &:hover::before {
+          transform: scaleX(1);
+        }
+      }
+      @include media(tablet) {
+        &:hover {
+          .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: rv-max(80) 0;
+  transform: translateX(-100%);
+  @include transition;
+  background-color: white;
+
+  @include media(tablet) {
+    position: static;
+    align-items: flex-end;
+    height: auto;
+    padding: 0;
+    transform: none;
+    background-color: transparent;
+  }
+
+  &.is-active {
+    transform: translateX(0);
+    overflow: auto;
+  }
+
+  $fadeTransitionTimingFunction: cubic-bezier(0.33, 0.04, 0.1, 1);
+  $fadeTransitionDuration: 600ms;
+
+  @include media(0, tablet) {
+    .c-fade-right {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    &.is-active {
+      .c-fade-right {
+        opacity: 1;
+        @for $i from 1 through 100 {
+          &:nth-of-type(#{$i}n) {
+            transition-delay: #{$i * 100}ms;
+          }
+        }
+        transition: all $fadeTransitionDuration $fadeTransitionTimingFunction;
+        transform: translate(0);
+      }
+    }
+  }
+}
+
+.c-mobile-contact {
+  text-align: center;
+  @include typo-buttons;
+
+  @include media(tablet) {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: block;
+      margin: 0 16px;
+    }
+  }
+}

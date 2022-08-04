@@ -1,0 +1,111 @@
+.c-text-block-with-img-variant-2 {
+  margin-bottom: rv(123, 240);
+
+  @include media(tablet) {
+    padding-top: rv(63, 80);
+  }
+
+  &__grid {
+    grid-auto-flow: dense;
+
+    @include media(0, tablet) {
+      row-gap: rv(136);
+    }
+  }
+
+  &__text-block-wrapper {
+    grid-column: 1/-1;
+
+    @include media(tablet) {
+      grid-column: 1/6;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    grid-column: 2/-1;
+
+    @include media(tablet) {
+      grid-column: 7/-2;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__accent {
+    position: absolute;
+    z-index: -1;
+
+    // Variant 1
+    &--box-bigger {
+      right: -1rem;
+      width: rv(359, 359, $mobileWidth);
+      height: rv-max(768, 244);
+      top: 0;
+      transform: translateY(calc(#{rv(63, 80)} * -1));
+      color: color(primary2-medium);
+
+      @include media(mobile) {
+        right: -2.75rem;
+      }
+
+      @include media(tablet) {
+        right: calc(#{rv(16, 140)} * -1);
+        width: 100%;
+        height: rv(283, 532);
+      }
+    }
+
+    &--box-smaller {
+      right: -1rem;
+      transform: translateY(calc(#{rv(33, 33, $mobileWidth)}));
+      width: rv(300, 300, $mobileWidth);
+      height: 100%;
+      bottom: 0;
+      color: color(primary1-light);
+
+      @include media(mobile) {
+        right: -2.75rem;
+      }
+
+      @include media(tablet) {
+        right: 50%;
+        transform: translateX(6%);
+        width: rv(300, 800);
+        height: rv(283, 434);
+      }
+    }
+
+    // Variant 2
+    &--right-box-smaller {
+      right: -1rem;
+      bottom: 0;
+      transform: translateY(calc(#{rv(33, 33, $mobileWidth)}));
+      width: rv(300, 300, $mobileWidth);
+      height: 100%;
+      color: color(primary1-light);
+
+      @include media(mobile) {
+        right: -2.75rem;
+      }
+
+      @include media(tablet) {
+        top: 32%;
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        transform: translateX(calc(#{rv(0, 100)} * 0.5 * -1));
+        width: 100%;
+        height: rv(283, 434);
+      }
+    }
+
+    .c-text-block-with-img-variant-2__accent-inner {
+      height: 100%;
+      width: 100%;
+      background-color: currentColor;
+    }
+  }
+}

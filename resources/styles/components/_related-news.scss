@@ -1,0 +1,40 @@
+.c-related-news {
+  margin-bottom: rv(90, 240);
+
+  @include media(tablet) {
+    padding-top: 100px;
+  }
+
+  &__wrapper {
+    padding: 90px 0;
+    background-color: color(bg-light);
+
+    @include media(tablet) {
+      padding: 80px 0 140px;
+    }
+  }
+
+  &__title-wrapper {
+    grid-column: 1/-1;
+
+    @include media(tablet) {
+      grid-column: 1/7;
+    }
+  }
+
+  &__img-wrapper {
+    grid-column: 1/-1;
+    margin-top: 50px;
+
+    @include media(tablet) {
+      grid-column: 7/13;
+      margin-top: -180px;
+    }
+  }
+
+  &__title {
+    @include typo-h2;
+    text-transform: uppercase;
+    margin: rv(13, 20) 0 rv(30, 60);
+  }
+}

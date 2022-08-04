@@ -1,0 +1,43 @@
+.c-text-block {
+  p span {
+    color: color(primary1) !important;
+  }
+
+  ul,
+  ol {
+    li {
+      margin-bottom: 14px;
+      &::marker {
+        margin-right: 10px;
+        color: color(primary1);
+      }
+    }
+  }
+
+  &__title {
+    @include typo-h2;
+    padding-bottom: rv(30, 60);
+  }
+
+  &__desc1 {
+    @include typo-p1;
+    p {
+      padding-bottom: 20px;
+    }
+
+    @include media(tablet) {
+      font-size: rv(16, 20);
+    }
+  }
+
+  &__desc2 {
+    @include typo-p2;
+    p {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    padding-top: 30px;
+  }
+}
